@@ -14,7 +14,7 @@
 .todo-web-app{
     width:100%;
     max-width: 540px;
-    background: #fff;
+    background: #f9f6f6;
     margin: 100px auto 20px;
     padding: 40px 30px 70px;
     border-radius: 10px;
@@ -52,6 +52,17 @@ button{
     border: none;
     outline: none;
     padding: 16px 50px;
+    background: rgb(146, 127, 127);
+    color: #edeefe;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+button2{
+    border: none;
+    outline: none;
+    float: right;
+    padding: 16px 10px;
     background: rgb(146, 127, 127);
     color: #edeefe;
     font-size: 16px;

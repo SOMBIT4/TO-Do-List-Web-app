@@ -19,6 +19,11 @@ function addTask(){
     inputBox.value = '';
     saveData();
 }
+// delete all function
+function deleteAllTasks(){
+    listcontainer.innerHTML = '';
+    saveData();
+}
 
 //check uncheck + delete function + edit function
 listcontainer.addEventListener("click",function(e){
