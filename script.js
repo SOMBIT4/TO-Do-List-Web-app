@@ -1,6 +1,6 @@
 const inputBox = document.getElementById("input-box");
 const listcontainer = document.getElementById("list-container");
-//empty box fill up + cross button
+//empty box fill up + cross button + edit button
 function addTask(){
     if(inputBox.value === ''){
         alert("You must write something!");
@@ -12,11 +12,15 @@ function addTask(){
         let span = document.createElement("span");
         span.innerHTML = "\u00d7";
         li.appendChild(span);
+        let edit = document.createElement("edit");
+        edit.innerHTML = "\u270e"
+        li.appendChild(edit);
     }
     inputBox.value = '';
     saveData();
 }
-//check uncheck delete function
+
+//check uncheck + delete function + edit function
 listcontainer.addEventListener("click",function(e){
     if(e.target.tagName==="LI"){
         e.target.classList.toggle("checked");
@@ -25,6 +29,15 @@ listcontainer.addEventListener("click",function(e){
     else if(e.target.tagName === "SPAN"){
         e.target.parentElement.remove();
         saveData();
+    }
+    else if(e.target.tagName === "EDIT"){
+        let listItem = e.target.parentElement;
+        let newValue = prompt("Edit your item:", listItem.childNodes[0].nodeValue.trim());
+        if (newValue) {
+            listItem.childNodes[0].nodeValue = newValue + " ";
+            saveData();
+        }
+
     }
 },false);
 //save data function
