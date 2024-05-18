@@ -58,6 +58,7 @@ button{
     cursor: pointer;
     border-radius: 40px;
 }
+/*check uncheck button fucntion*/
 ul li{
     list-style: none;
     font-style: 17px;
@@ -78,10 +79,27 @@ ul li::before{
     top: 6px;
     left: 8px;
 }
+/*check uncheck button fucntion*/
 ul li.checked{
     color: red;
     text-decoration: line-through;
 }
 ul li.checked::before{
     background-image: url(images/checked.png);
+}
+/*cross button*/
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 6px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color:rgb(163, 97, 163);
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+}
+ul li span:hover{
+    background: rgb(239, 160, 239);
 }
